@@ -1,0 +1,599 @@
+::selection{background:$red; color:#fff;}
+::-moz-selection{background:$red; color:#fff;}
+::-webkit-selection{background:$red; color:#fff;} 
+      
+.wrap {
+  width:100%; 
+	overflow:hidden;
+  @include boxsize;
+  
+  //header
+  .header_wrap{
+    @include fixed(0, auto, 0, 0);
+    @include boxsize;
+    background:$white;
+    border-right:1px solid $gray;
+    width:90px;
+    max-width:880px;
+    z-index:9997; 
+    transition: background-color ease-out .5s;
+    -webkit-transition: background-color ease-out .5s;
+    -moz-transition: background-color ease-out .5s;
+
+    @include respond-to('medium') {
+      display:none;
+    }
+
+    #header{
+      @include after;
+      @include absolute(0, auto, 0, 0);
+      z-index:9;
+      height:100%;
+      width:89px;
+      background:$white;
+
+      .logo{
+        @include absolute(40px, auto, auto, 25px);
+        margin:auto;
+        @include btn_img(block, 41px, 40px);
+        overflow:hidden;
+        text-indent:-999999em;
+        background:url(#{$imgHeader}kwangmyung_logo_big.png) no-repeat left center; 
+        @include transition(.2s);
+
+        a{
+          @include btn_img(block, 41px, 40px);
+        }
+      }
+
+      .menu_btn{
+        @include absolute(0, auto, 0, 33px);
+        margin:auto;
+        @include btn_img(block, 25px, 25px);
+        overflow:hidden;
+        text-indent:-999999em;
+        background:url(#{$imgHeader}btn-menu_open.png) no-repeat center;
+        
+        a{
+          @include btn_img(block, 25px, 25px);
+        }
+      }
+
+      >div{
+        @include boxsize;
+        float:right;
+        @include transition;
+
+        &.lang{
+          width:90px;
+          @include absolute(auto, 0, 40px, auto);
+
+          li{
+            text-align:center;
+            a{
+              color:$darkGray;
+              font-weight:bold;
+              font-size:13px;
+
+              &.on{
+                color:$red;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .main_menu_wrap{
+      width:100%;
+      max-width:600px;
+      overflow:hidden;
+      //height:100%;
+      @include absolute(50%, auto, auto, -100%);
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      margin:0 auto;  
+      @include transition(.2s);
+
+      @include respond-to('medium-half') {
+        max-width:550px;
+      }
+
+      .main_menu{
+        > ul{
+          @include after;
+          width:100%;
+
+          > li{
+            @include after;
+            width:100%; 
+            border-top:1px solid $lightenGray;
+            padding:50px 0;
+
+            &:first-child{
+              border:none;
+            }
+
+            .menu-title{
+              float: left;
+              display:inline-block;
+              width: 135px;
+
+              @include respond-to('medium-half') {
+                width: 120px;
+              }
+
+              a{
+                line-height:$fontSize+8;
+                font-size:$fontSize+8;
+                color:$darkGray;
+                font-weight:bold;
+
+                @include respond-to('medium-half') {
+                  font-size:$fontSize+5;
+                  line-height:$fontSize+5;
+                }
+              }
+            }
+
+            > ul{
+              display:block;
+              overflow: hidden;
+              text-align:left;
+              line-height:$fontSize+8;
+              width:calc(100% - 135px);
+
+              @include respond-to('medium-half') {
+                width: calc(100% - 120px);
+                line-height:$fontSize+5;
+                font-size:$fontSizeM;
+              }
+
+              li{
+                margin-left: 18px;
+                float: left;
+
+                &:first-child{
+                  margin-left:0;
+                }
+
+                a{
+                  color:$lightGray;
+                }
+
+                &.on{
+                  a{
+                    color:$red;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    &.open{
+      #header{
+        //background: $white;
+
+        .logo{
+          @include btn_img(block, 198px, 40px);
+  
+          a{
+            @include btn_img(block, 198px, 40px);
+          }
+        }
+
+        .menu_btn{
+          background:url(#{$imgHeader}btn-menu_close.png) no-repeat center !important; 
+        }
+      }
+
+      .main_menu_wrap{
+        @include absolute(50%, 0, auto, 0);
+      }
+    }
+  }
+
+  //mobile header
+  .m_header_wrap{
+    display:none;
+    @include fixed(0, 0, auto, 0);
+    z-index:9997; 
+    background:$white;
+
+    #m_header{
+      width:100%;
+      border-bottom:1px solid $lightenGray;
+      z-index:9;
+      position:relative;
+      //@include fixed(0, 0, auto, 0);
+      @include transition;
+
+      .logo{
+        @include btn_img(block, 30px, 30px);
+        margin:0 auto;
+        overflow:hidden;
+        text-indent:-999999em;
+        background:url(#{$imgHeader}kwangmyung_logo_mini.png) no-repeat center;
+        background-size: contain; 
+        padding:15px 0;
+
+        a{
+          @include btn_img(block, 30px, 30px);
+        }
+      }
+
+      .menu_btn{
+        @include absolute(0, auto, 0, 5%);
+        margin:auto;
+        @include btn_img(block, 25px, 25px);
+        overflow:hidden;
+        text-indent:-999999em;
+        background:url(#{$imgHeader}btn-menu_open.png) no-repeat center;
+        
+        a{
+          @include btn_img(block, 25px, 25px);
+        }
+      }
+
+      .lang{
+        @include absolute(0, 5%, 0, auto);
+        margin:auto;
+        height:20px;
+        line-height: 1;
+        background:url(#{$imgHeader}lang_arrow.png) no-repeat 100% center; 
+        background-size: 9px;
+
+        select{
+          padding-right:15px;
+          border:none; 
+          background:none;
+          font-size: 13px;
+          font-weight: bold;
+          height:20px;
+        }
+      }
+    }
+
+    .main_menu_wrap{
+      height: calc(100vh - 61px);
+      text-align: center;
+      //position: relative;
+      //background:$white;
+      display:none;
+      overflow-y:auto;
+
+      > div{
+        margin:50px 0;
+
+        .main_menu{
+          > ul{
+            > li{
+              margin-top:30px;
+              .menu-title{                
+                a{
+                  color:$darkGray;
+                  font-weight:bold;
+                  font-size:$fontSize+8;
+                }
+              }
+
+              &:first-child{
+                margin-top:0;
+              }
+
+              > ul{
+                margin-top:20px;
+                display:none;
+                overflow:hidden;
+
+                > li{
+                  margin-top:5px;
+
+                  a{
+                    color:$lightGray;
+                  }
+
+                  &:first-child{
+                    margin-top:0;
+                  }
+
+                  &.on{
+                    a{
+                      color:$red;
+                    }
+                  }
+                }
+
+                &.open{
+                  display:block;
+                }
+              }
+            }
+          }
+        }
+
+  
+      }
+
+      > p{
+        color:$lightGray;
+        font-size:$fontSizeM;
+        padding-bottom:25px;
+        //@include absolute(auto, 0, 25px, 0);
+      }
+
+      
+    }
+
+    @include respond-to('medium') {
+      display:block;  
+    }
+
+    &.open{
+      height: 100%;
+
+      #m_header{
+        .logo{
+          background:url(#{$imgHeader}kwangmyung_logo_mini.png) no-repeat center !important;
+          background-size: contain !important; 
+        }
+  
+        .menu_btn{
+          background:url(#{$imgHeader}btn-menu_close.png) no-repeat center !important;
+        }
+  
+        .lang{
+          background:url(#{$imgHeader}lang_arrow.png) no-repeat 100% center !important; 
+          background-size: 9px !important;
+
+          select{
+            color:$black !important;
+
+            option{
+              color:$darkGray;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  //container
+  #container{
+    padding-left:90px;
+
+    @include respond-to('medium') {
+      padding-left:0px;
+    }
+  }
+
+  //footer
+  #footer{
+    padding-left:90px;
+    border-top:1px solid $lightenGray;
+
+    @include respond-to('medium') {
+      padding-left:0px;
+    }
+
+    .inner{
+      width: 94%;
+      margin: 40px auto;
+      position: relative;
+      @include after;
+
+      @include respond-to('medium') {
+        margin: 20px auto;
+      }
+
+      img{
+        float:left;
+        display:inline-block;
+        width: 198px;
+        margin-right:5%;
+        @include absolute(0, auto, auto, 0);
+        margin:auto;
+
+        @include respond-to('medium') {
+          display:none;
+        }
+      }
+
+      > div{
+        display: block;
+        padding:0 170px 0 248px;
+        text-align: left;
+        width: 100%;
+        position: relative;
+        @include boxsize;
+
+        @include respond-to('large-half') {
+          padding: 70px 0 0;
+        }
+        @include respond-to('medium') {
+          width:100%;
+          text-align:center;
+          padding:0;
+        }
+
+        p{
+          color:$lightGray;
+          font-size:$fontSizeM;
+
+          @include respond-to('medium') {
+            font-size:12px;
+          }
+
+          br{
+            display:none;
+
+            @include respond-to('medium') {
+              display:block;
+            }
+          }
+        }
+
+        .lang_select{
+          @include absolute(0, 0, 0, auto);
+          width:150px;
+          overflow: visible;
+          @include transition;
+
+          @include respond-to('medium') {
+            display:none;
+          }
+
+          p{
+            border:1px solid $lightenGray;
+            @include btn_img(block, 100%, auto);
+            @include boxsize;
+            line-height:1;
+            padding:15px 20px;
+            background:url(#{$imgSub}footer_lang_arrow.png) no-repeat 93% center; 
+            cursor: pointer;
+          }
+
+          div{
+            display:none;
+            @include absolute(auto, 0, 100%, 0);
+            width:100%;
+            z-index:9;
+            padding-bottom:5px;
+            overflow:hidden;
+
+            ul{
+              border:1px solid $lightenGray;
+              @include boxsize;
+              text-align: left;
+              background:$white;
+
+              li{
+                @include boxsize;
+                line-height:1;
+
+                a{
+                  color:$lightGray;
+                  font-size:$fontSizeM;
+                  display:block;
+                  padding:5px 20px;
+
+                  &:hover{
+                    color:$red;
+                  }
+                }
+              }
+            }
+          } 
+
+          &:hover{
+            div{
+              display:block;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  
+
+  //main 
+  &.main{
+    //header
+    .header_wrap{
+      @include fixed(0, auto, 0, 0);
+      border-right:1px solid $white;
+      background:none;
+
+      #header{
+        background:none;
+
+        .logo{
+          background:url(#{$imgHeader}kwangmyung_main_logo_mini.png) no-repeat center; 
+        }
+  
+        .menu_btn{
+          background:url(#{$imgHeader}btn-main_menu_open.png) no-repeat center; 
+        }
+      }
+
+      &.open{
+        #header{
+          .logo{
+            @include btn_img(block, 198px, 40px);
+            background:url(#{$imgHeader}kwangmyung_logo_big.png) no-repeat center; 
+    
+            a{
+              @include btn_img(block, 198px, 40px);
+            }
+          }
+        }
+      }
+    }
+
+    .m_header_wrap{
+      background:none;
+
+      #m_header{
+        .logo{
+          background:url(#{$imgHeader}kwangmyung_main_logo_mini.png) no-repeat center;
+          background-size: contain; 
+        }
+  
+        .menu_btn{
+          background:url(#{$imgHeader}btn-main_menu_open.png) no-repeat center;
+        }
+  
+        .lang{
+          background:url(#{$imgHeader}lang_main_arrow.png) no-repeat 100% center; 
+          background-size: 9px;
+
+          select{
+            color:$white;
+
+            option{
+              color:$darkGray;
+            }
+          }
+        }
+      }
+
+      &.open{
+        background:$white;
+      }
+    }
+
+
+    //container
+    #container{
+      padding-left:0;
+    }
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+

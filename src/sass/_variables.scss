@@ -1,0 +1,100 @@
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. '
+         + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+$breakpoints: (
+  'sssmall': (max-width: 329px),
+  'ssmall': (max-width: 439px), 
+  'small': (max-width: 639px),
+  'medium': (max-width: 779px),
+  'medium-half': (max-width: 899px),  
+  'large-half': (max-width: 980px),
+  'large': (max-width: 1049px),
+  'huge-half': (max-width: 1139px),  
+  'huge': (max-width: 1199px),
+  'big-half': (max-width: 1399px),
+  'big': (max-width: 1599px),
+  'big-over': (min-width: 1829px),
+  );
+
+
+$link : "/Users/design04/Desktop/kwangmyung/dist/";
+//$link : "/dist/";
+
+//dist
+$img : "#{$link}images/";
+$imgHeader : "#{$img}header/";
+$imgGnb : "#{$img}gnb/";
+$imgIcon : "#{$img}icon/";
+$imgMain : "#{$img}main/";
+$imgSub : "#{$img}sub/";
+
+$white : #fff;
+$darkWhite : #f5f5f5;
+$black : #000;
+$gray : #ccc;
+$darkGray : #333;
+$lightGray : #999;
+$lightenGray : #e2e2e2;
+$fontGray : #555;
+$red : #c20000;
+
+$fontWeightNormal : 400;
+
+$grid1 : 100%;
+$grid2 : 50%;
+$grid3 : 33.33333333%;
+$grid4 : 25%;
+$grid5 : 20%;
+$grid6 : 16.66666666%;
+
+$maxWidth : 1600px;
+
+input[type="text"],
+input[type="password"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+
+  &::-ms-expand{
+    display:none;
+  }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border:none !important;
+  -webkit-text-fill-color: $white !important;
+  -webkit-box-shadow: 0 0 0px 1000px rgba($black, 0) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+

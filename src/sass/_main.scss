@@ -1,0 +1,144 @@
+#main_slider{
+  width:100%;
+
+  .item{
+    width:100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    //padding-left:90px;
+
+    .txt{
+      color:$white;
+      text-align:center;
+      font-size:$fontSize+4;
+      padding-left:90px;
+      @include absolute(50%, 0, auto, 0);
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+
+      @include respond-to('medium') {
+        padding-left:0px;
+        font-size:$fontSize;
+        top:40%;
+      }
+
+      @include respond-to('sssmall') {
+        font-size:$fontSizeM;
+        top:35%;
+      }
+
+      *{
+        padding:0 10px;
+      }
+      
+      h2{
+        font-size:$fontSize+66;    
+
+        @include respond-to('medium') {
+          font-size:$fontSize+33;   
+          line-height: 1;  
+        }   
+
+        @include respond-to('sssmall') {
+          font-size:$fontSize+26;
+        }
+      }
+
+      .button_box{
+        margin:35px auto;
+
+        @include respond-to('medium') {
+          margin:25px auto;
+        }  
+
+        @include respond-to('sssmall') {
+          margin:15px auto;
+        }
+
+        span{
+          @include btn_img(inline-block, 24px, 2px);
+          overflow:hidden;
+          text-indent:-999999em;
+          background:$white;
+          margin:5px;
+          opacity: 1;
+          border-radius: 0;
+
+          @include respond-to('medium') {
+            @include btn_img(inline-block, 15px, 2px);
+          }  
+
+          &.swiper-pagination-bullet-active{
+            background:$red;
+          }
+        }
+      }
+
+      @include respond-to('medium') {
+        br{
+          display:none;
+        }
+      }
+
+    }
+  }
+
+  &.owl-theme {
+    .owl-nav, .owl-dots{
+      display:none;
+    }
+  }
+}
+
+.gnb_wrap{
+  text-align:center;
+  padding-left:90px;
+  width: calc(100% - 90px);
+  margin:0 auto;
+  max-width:900px;
+  @include absolute(auto, 0, 50px, 0);
+  z-index:99;
+
+  @include respond-to('medium') {
+    padding-left:0;
+    width:100%;
+  }
+
+  ul{
+    @include after;
+    padding:0 10px;
+
+    li{
+      float:left;
+      width:$grid6;
+
+      @include respond-to('medium') {
+        width:$grid3;
+      }
+      
+      a{
+        color:$white;
+        display:block;
+        padding: 30px 0 50px;
+        @include transition;
+
+        @include respond-to('medium') {
+          padding: 0;
+          margin-top:30px;
+        }
+      
+        img{
+          display:block;
+          margin:0 auto;
+        }
+
+        &:hover{
+          background:$red;
+        }
+      }
+    }
+  }
+ 
+}

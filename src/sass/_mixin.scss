@@ -1,0 +1,39 @@
+@mixin absolute($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin fixed($top, $right, $bottom, $left) {
+  position: fixed;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin boxsize {
+  box-sizing: border-box; 
+	-webkit-box-sizing: border-box;
+}
+
+@mixin after {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;    
+  }
+}
+
+@mixin transition($time:0.4s) {
+  transition: all ease-out $time;
+  -webkit-transition: all ease-out $time;
+  -moz-transition: all ease-out $time;
+}
+
+@mixin btn_img($display, $width, $height) {
+  display: $display;
+  width: $width;
+  height: $height;
+}
