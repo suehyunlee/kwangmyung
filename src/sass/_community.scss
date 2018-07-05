@@ -1,4 +1,4 @@
-//회사소개
+//뉴스
 #container.news{
   
   .cont{
@@ -994,5 +994,123 @@
     }
 
 
+  }
+}
+
+//제품카타로그
+#container.catalog{ 
+  .cont{
+    width:94%;
+    max-width:1200px;
+    margin:0 auto;
+    @include after;
+
+    .cont_section{
+      .img_list{
+        > ul{
+          width:102%;
+          margin-left:-2%;
+          @include after;
+
+          @include respond-to('small') {
+            width: 104%;
+            margin-left: -4%;
+          }
+          @include respond-to('ssmall') {
+            width: 96%;
+            margin: 0 auto;
+          }
+
+          >li{
+            width: 23%;
+            margin-left: 2%;
+            float: left;
+            margin-bottom: 60px;
+
+            @include respond-to('large') {
+              width:31.33%;
+            }
+            @include respond-to('small') {
+              width: 46%;
+              margin-left: 4%;
+              margin-bottom: 40px;
+            }
+            @include respond-to('ssmall') {
+              width: 100%;
+              margin-left: 0%;
+            }
+
+            .list-item{
+              text-align:center;
+
+              .img{
+                display: block;
+                text-align: center;
+
+                @include respond-to('ssmall') {
+                  max-width: 300px;
+                  margin: 0 auto;
+                }
+
+                > div{
+                  @include btn_img(inline-block, 100%, auto);
+                  background: $darkWhite;
+                  border: 1px solid $lightenGray;
+                  padding-bottom: 5px;
+                  
+                  > img{
+                    @include btn_img(block, 100%, auto);
+                    margin-top: -6px;
+                    margin-left: -6px;
+                    border: 1px solid $lightenGray;
+                    @include boxsize;
+                  }
+                }
+              }
+
+              > div{
+                p{
+                  height: 43px;
+                  font-weight: normal;
+                  margin: 15px auto 25px;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  font-size:18px;
+                  color:$black;
+                  font-weight: 600;
+                  line-height: 1.2;
+                }
+
+                .btn_down{
+                  @include btn_img(block, 150px, 40px);
+                  margin: 0 auto;
+                  color: $fontGray;
+                  border: 1px solid $lightenGray;
+                  line-height: 40px;
+
+                  span{
+                    padding-left: 25px;
+                    background: url(#{$imgIcon}icon_down.png) no-repeat left center;
+                  }
+
+                  &:hover{
+                    border: 1px solid $red;
+                    color: $white;
+                    background:$red;
+
+                    span{
+                      background: url(#{$imgIcon}icon_down_hover.png) no-repeat left center;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
