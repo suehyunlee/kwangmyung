@@ -190,6 +190,18 @@
         .menu_btn{
           background:url(#{$imgHeader}btn-menu_close.png) no-repeat center !important; 
         }
+        >div{
+          &.lang{
+            li{
+              a{
+                color:$darkGray !important;
+                &.on{
+                  color:$red !important;
+                }
+              }
+            }
+          }
+        }
       }
 
       .main_menu_wrap{
@@ -521,6 +533,18 @@
         .menu_btn{
           background:url(#{$imgHeader}btn-main_menu_open.png) no-repeat center; 
         }
+        div{
+          &.lang{
+            li{
+              a{
+                color:#fff;
+                &.on{
+                  color:$red;
+                }
+              }
+            }
+          }
+        }
       }
 
       &.open{
@@ -581,7 +605,20 @@
 
 
 
-
+.clear{
+  &:after{
+    content:"";
+    display: block;
+    zoom:1;
+    clear: both;
+  }
+  >li{
+    float:left;
+  }
+  >div{
+    float:left;
+  }
+}
 
 
 

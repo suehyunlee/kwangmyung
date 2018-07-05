@@ -1,13 +1,5 @@
-//@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
-// @font-face {
-//     font-family: 'GothamBook';
-//     src: url('#{$link}fonts/GothamBook.eot'); /* IE9 Compat Modes */
-//     src: url('#{$link}fonts/GothamBook.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-//         url('#{$link}fonts/GothamBook.woff') format('woff'), /* Modern Browsers */
-//         url('#{$link}fonts/GothamBook.ttf')  format('truetype'); /* Safari, Android, iOS */
-//     font-weight: 700;
-//     font-style: normal;
-// }
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
 $fontfamily:'Spoqa Han Sans', 'Sans-serif';
 
 *{
