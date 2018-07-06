@@ -1114,3 +1114,18 @@
     }
   }
 }
+
+//제품카타로그
+#container.video{ 
+  .cont{
+    width:94%;
+    max-width:1200px;
+    margin:0 auto;
+    @include after;
+
+    .cont_section{
+
+
+    }
+  }
+}

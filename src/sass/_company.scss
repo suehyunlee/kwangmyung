@@ -262,9 +262,24 @@
                 }
               }
 
-              &:nth-child(even){
+              &.mid_bottom1{
                 p{
                   color:#e6743b;
+                }
+              }
+              &.mid_bottom2{
+                p{
+                  color:#ff9292;
+                }
+              }
+              &.mid_bottom3{
+                p{
+                  color:#ccc;
+                }
+              }
+              &.mid_bottom4{
+                p{
+                  color:#0a2550;
                 }
               }
 
@@ -399,8 +414,8 @@
             cursor: default;
 
             h3{
-              text-transform: uppercase;
-              font-size:$fontSize+24;
+              text-transform: capitalize;
+              font-size:$fontSize+22;
               margin-bottom:20px;
               line-height:1;
               cursor: default;
