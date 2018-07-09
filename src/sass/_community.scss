@@ -1131,7 +1131,11 @@
         margin-bottom:60px;
 
         @include respond-to('small') {
+<<<<<<< HEAD
           padding:20px;
+=======
+          margin-bottom:30px;
+>>>>>>> e3f920955c76338dfdf1d20de7f3de94088be29c
         }
 
         .img_box{

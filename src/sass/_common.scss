@@ -407,7 +407,7 @@
       img{
         float:left;
         display:inline-block;
-        width: 198px;
+        width: 156px;
         margin-right:5%;
         @include absolute(0, auto, auto, 0);
         margin:auto;
@@ -419,7 +419,7 @@
 
       > div{
         display: block;
-        padding:0 170px 0 248px;
+        padding:0 170px 0 210px;
         text-align: left;
         width: 100%;
         position: relative;
