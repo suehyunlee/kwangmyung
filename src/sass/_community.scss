@@ -1115,7 +1115,7 @@
   }
 }
 
-//홍보영상
+//제품카타로그
 #container.video{ 
   .cont{
     width:94%;
@@ -1124,122 +1124,7 @@
     @include after;
 
     .cont_section{
-      .top{
-        width:100%;
-        @include after;
-        position:relative;
-        margin-bottom:60px;
 
-        @include respond-to('small') {
-          margin-bottom:30px;
-        }
-
-        .img_box{
-          float:left;
-          width:72%;
-          max-width:893px;
-          position:relative;
-
-          @include respond-to('large') {
-            width:100%;
-          }
-
-          > a{
-            @include btn_img(block, 100%, auto);
-
-            img{
-              @include btn_img(block, 100%, auto);
-            }
-
-            .btn{
-              @include btn_img(block, 49px, 49px);
-              @include absolute(0, 0, 0, 0);
-              margin:auto;
-              background:url(#{$imgSub}community/video_btn.png) no-repeat center;
-            }
-          }
-        }
-
-        .txt_box{
-          @include absolute(0, 0, 0, auto);
-          width:25%;
-          float:right;
-          padding:30px;
-          background:$darkWhite;
-          @include boxsize;
-
-          @include respond-to('large') {
-            position:static;
-            width:100%;
-
-             br{
-               display:none;
-             }
-          }
-          @include respond-to('small') {
-            padding:20px;
-          }
-
-          > h4{
-            font-size:$fontSize+6;
-            color:$black;
-            margin-bottom:20px;
-          }
-        }
-      }
-
-      .img_list{
-        width:100%;
-
-        > ul{
-          @include after;
-          width:102%;
-          margin-left:-2%;
-
-          @include respond-to('ssmall') {
-            width:100%;
-            margin-left:0;
-          }
-
-          > li{
-            width:31.33%;
-            float:left;
-            margin-left:2%;
-            text-align: center;
-            margin-bottom: 25px;
-
-            @include respond-to('large-half') {
-              width:48%;
-            }
-            @include respond-to('ssmall') {
-              width:100%;
-              margin-left:0;
-            }
-
-            .img{
-              position:relative;
-              @include btn_img(block, 100%, auto);
-
-              img{
-                @include btn_img(block, 100%, auto);
-              }
-  
-              .btn{
-                @include btn_img(block, 49px, 49px);
-                @include absolute(0, 0, 0, 0);
-                margin:auto;
-                background:url(#{$imgSub}community/video_btn.png) no-repeat center;
-              }
-            }
-
-            p{
-              font-size:$fontSize+2;
-              color:$black;
-              margin-top:20px;
-            }
-          }
-        }
-      }
 
     }
   }
