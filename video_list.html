@@ -17,6 +17,7 @@
   <!-- js -->
   <script type="text/javascript" src="src/js/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="src/js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="src/js/jquery.bpopup.min.js"></script>
   <script type="text/javascript" src="src/js/common.js"></script>
 
  </head>
@@ -198,7 +199,7 @@
 				<div class="cont_section">
 					<div class="top">
 						<div class="img_box">
-							<a href="">
+							<a href="javascript:showVideo();">
 								<img src="dist/images/sub/community/sample/video_img1.jpg" alt="">
 								<span class="btn"></span>
 							</a>
@@ -213,7 +214,7 @@
 						<ul>
 							<li>
 								<div class="list-item">
-									<a href="#" class="img">
+									<a href="javascript:showVideo();" class="img">
 										<div>
 											<img src="dist/images/sub/community/sample/video_img2.jpg" alt="">
 											<span class="btn"></span>
@@ -227,7 +228,7 @@
 							</li>
 							<li>
 								<div class="list-item">
-									<a href="#" class="img">
+									<a href="javascript:showVideo();" class="img">
 										<div>
 											<img src="dist/images/sub/community/sample/video_img3.jpg" alt="">
 											<span class="btn"></span>
@@ -241,7 +242,7 @@
 							</li>
 							<li>
 								<div class="list-item">
-									<a href="#" class="img">
+									<a href="javascript:showVideo();" class="img">
 										<div>
 											<img src="dist/images/sub/community/sample/video_img4.jpg" alt="">
 											<span class="btn"></span>
@@ -255,7 +256,7 @@
 							</li>
 							<li>
 								<div class="list-item">
-									<a href="#" class="img">
+									<a href="javascript:showVideo();" class="img">
 										<div>
 											<img src="dist/images/sub/community/sample/video_img5.jpg" alt="">
 											<span class="btn"></span>
@@ -269,7 +270,7 @@
 							</li>
 							<li>
 								<div class="list-item">
-									<a href="#" class="img">
+									<a href="javascript:showVideo();" class="img">
 										<div>
 											<img src="dist/images/sub/community/sample/video_img6.jpg" alt="">
 											<span class="btn"></span>
@@ -283,7 +284,7 @@
 							</li>
 							<li>
 								<div class="list-item">
-									<a href="#" class="img">
+									<a href="javascript:showVideo();" class="img">
 										<div>
 											<img src="dist/images/sub/community/sample/video_img7.jpg" alt="">
 											<span class="btn"></span>
@@ -311,7 +312,34 @@
 	
 				</div>
 			</div>
-            <!-- cont -->
+			<!-- cont -->
+
+			<div class="popup">
+				<a href="#" class="b-close">close</a>
+
+				<div id="video_pop">
+					<img src="dist/images/sub/community/sample/video_img1.jpg" alt="">
+					<iframe src="https://www.youtube.com/embed/7iNbnineUCI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+			</div>
+			
+			<script>
+			function showVideo(mode){
+				$('.popup').bPopup({
+					speed: 450,
+					positionStyle: 'fixed', //'fixed' or 'absolute'
+					transition: 'fadeIn'
+				});
+
+				var videoH = $('#video_pop img').height();
+				$('#video_pop iframe').height(videoH);
+			}
+			
+			$(window).resize(function(){
+				var videoH = $('#video_pop img').height();
+				$('#video_pop iframe').height(videoH);
+			});
+			</script>
 
         </div>
         <!-- container -->
