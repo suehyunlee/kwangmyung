@@ -200,7 +200,7 @@
 
 				<div class="history_wrap">
 					<div id="list_his1985" class="list-his first">
-						<div>1985~1994</div>
+						<div>태동기<br>1985~1990</div>
 
 						<div class="list on">
 							<span class="dot first"></span>
@@ -212,58 +212,69 @@
 								<li>
 									<span>1988.06</span><p>광명산업주식회사 법인전환</p>
 								</li>
-								<li>
-									<span>1991.11</span><p>경주공장 설립 (경북 경주시 외동읍 개곡리 143-5)</p>
-								</li>
-								<li>
-									<span>1991.12</span><p>공업진흥청 품질관리 등급사정 (프레스 금형가공 2등급)</p>
-								</li>
-								<li>
-									<span>1994.02</span><p>아산공장 준공</p>
-								</li>
 							</ul>
 						</div>
 					</div>
 
-					<div id="list_his2000" class="list-his">
-						<div>2000~2010</div>
+					<div id="list_his1991" class="list-his">
+							<div>국내 정착 및 발전기<br>1991~2006</div>
+	
+							<div class="list">
+								<span class="dot"></span>
+								<ul>
+									<li>
+										<span>1991.11</span><p>경주공장 설립 (경북 경주시 외동읍 개곡리 143-5)</p>
+									</li>
+									<li>
+										<span>1991.12</span><p>공업진흥청 품질관리 등급사정 (프레스 금형가공 2등급)</p>
+									</li>
+									<li>
+										<span>1994.02</span><p>아산공장 준공</p>
+									</li>
+									<li>
+										<span>2000.08</span><p>QS-9000 / ISO-9002 인증 획득</p>	
+									</li>
+									<li>
+										<span>2001.03</span><p>광주공장 설립</p>
+									</li>
+									<li>
+										<span>2001.12</span><p>SQ MARK 인증획득</p>
+									</li>
+									<li>
+										<span>2002.09</span><p>기술연구소 설립</p>
+									</li>
+									<li>
+										<span>2003.07</span><p>SQ MARK 인증획득 (용접, 금형)</p>
+									</li>
+									<li>
+										<span>2004.04</span><p>유망중소기업 선정 (한국산업은행)</p>
+									</li>
+									<li>
+										<span>2005.10</span><p>벤처기업 확인 (중소기업청)</p>
+									</li>
+									<li>
+										<span>2005.11</span><p>기술혁신형 중소기업 (INNO-BIZ) 확인 (중소기업청)</p>
+									</li>
+									<li>
+										<span>2005.12</span><p>ISO 14001 / TS16949 인증</p>
+									</li>
+									<li>
+										<span>2005.12</span><p>우량기술기업 선정 (기술보증기금)</p>
+									</li>
+									<li>
+										<span>2006.09</span><p>싱글 PPM 인증 (중소기업청)</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+					<div id="list_his2006" class="list-his">
+						<div>해외진출기<br>2006~2014</div>
 
 						<div class="list">
 							<span class="dot"></span>
 							<ul>
-								<li>
-									<span>2000.08</span><p>QS-9000 / ISO-9002 인증 획득</p>	
-								</li>
-								<li>
-									<span>2001.03</span><p>광주공장 설립</p>
-								</li>
-								<li>
-									<span>2001.12</span><p>SQ MARK 인증획득</p>
-								</li>
-								<li>
-									<span>2002.09</span><p>기술연구소 설립</p>
-								</li>
-								<li>
-									<span>2003.07</span><p>SQ MARK 인증획득 (용접, 금형)</p>
-								</li>
-								<li>
-									<span>2004.04</span><p>유망중소기업 선정 (한국산업은행)</p>
-								</li>
-								<li>
-									<span>2005.10</span><p>벤처기업 확인 (중소기업청)</p>
-								</li>
-								<li>
-									<span>2005.11</span><p>기술혁신형 중소기업 (INNO-BIZ) 확인 (중소기업청)</p>
-								</li>
-								<li>
-									<span>2005.12</span><p>ISO 14001 / TS16949 인증</p>
-								</li>
-								<li>
-									<span>2005.12</span><p>우량기술기업 선정 (기술보증기금)</p>
-								</li>
-								<li>
-									<span>2006.09</span><p>싱글 PPM 인증 (중소기업청)</p>
-								</li>
+								
 								<li>
 									<span>2006.11</span><p>멕시코 현지법인 설립 (KMIN-MEXICO)</p>
 								</li>
@@ -280,8 +291,8 @@
 						</div>
 					</div>
 
-					<div id="list_his2011" class="list-his last">
-						<div>2011~</div>
+					<div id="list_his2014" class="list-his last">
+						<div>재도약기<br>2014~</div>
 
 						<div class="list">
 							<span class="dot"></span>
@@ -326,9 +337,10 @@
 					//var listYearFirst = $(".list-his:eq(0)");
 					var listYearLast = $(".list-his.last");
 					var listYearLastOffset = $(listYearLast).offset();
+					
 
 					//마지막
-					if(curScrollTop >= listYearLastOffset.top-(win_h/2+200))
+					if(curScrollTop >= listYearLastOffset.top-(win_h/2))
 					{
 						$(listYearLast).find('.list').addClass("on");
 					}else{
@@ -342,17 +354,18 @@
 						var win_h = $(window).height();
 						
 						if(!$(listYear[i]).hasClass("last") && !$(listYear[i]).hasClass("first")){
-							if(curScrollTop >= (yearOffset.top - win_h/8))
+							if(curScrollTop >= (yearOffset.top - win_h/3))
 							{
 								$(listYear[i]).find('.list').addClass("on");
 							}else{
 								$(listYear[i]).find('.list').removeClass("on"); 
 							}
 						}
-
 					});
 
 				});
+
+				
 			});
 			</script>
             <!-- cont -->

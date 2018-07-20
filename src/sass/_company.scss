@@ -556,7 +556,7 @@
   }
 }
 
-@each $since in 1985, 2000, 2011 {
+@each $since in 1985, 1991, 2006, 2014 {
   @include list_his($since);
 }
 
@@ -594,11 +594,13 @@
           @include respond-to('medium-half') {
             font-size:$fontSize+16;
             text-align:left;
+            width:100%;
             @include absolute(0, auto, auto, 25px);
             margin-top: 0;
             transform: translateY(-50%);
             -webkit-transform: translateY(-50%);
             -moz-transform: translateY(-50%);
+            line-height:1.2;
           }
         }
 
