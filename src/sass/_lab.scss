@@ -1,445 +1,191 @@
 //회사소개
-#container.company{
+#container.lab{
   .sub_visual{
-    background-image:url(#{$imgSub}company/company_top.jpg);
+    background-image:url(#{$imgSub}lab/rnd_bg01.png);
     width:100%;
     height:345px;
     text-align:center;
     position: relative;
     background-position-y: 90px;
-
+    display: table;
     @include respond-to('medium') {
       margin-top:61px;
       background-image:url(#{$imgSub}company/company_top.jpg);
       min-width: 0;
       background-position-y: 61px;
     }
+    .txt{
+      position: static;
+      display: table-cell;
+      vertical-align: middle;
+    }
   }
-
+  .point{color:$red !important}
+  
   .cont{
-    text-align: center;
     padding:100px 0 0;
     position: relative;
     z-index: 9;
+    max-width:1200px;
+    margin:0 auto;
+    .section{
+      margin-bottom:95px;
 
-    .tit{
-      padding:0 13px;
-    }
+      &.tree_box{
+        .setup_area{
+          text-align:center;
 
-    .policy{
-      .policy_list{
-        width:94%;
-        max-width:1200px;
-        margin:40px auto;
-
-        .owl-carousel {
-          @include after;
-          width:100%;
-
-          @include respond-to('small') {
-            border:1px solid $lightenGray;
-          }
-  
-          .item{
-            width:$grid1;
-            //margin-left:2%;
-            float:left;
-            border:1px solid $lightenGray;
-            padding:80px 0;
-            @include boxsize;
-
-            @include respond-to('small') {
-              border:none;
-            }
-
-            img{
-              max-width: 123px;
-              margin: auto;
-            }
-  
-            p{
-              font-size:$fontSize+6;
-              margin-top:40px;
-  
-              span{
-                font-size:$fontSize+2;
-                color:$red;
-                font-weight:bold;
-                display:block;
-                text-transform: uppercase;
-              }
-            }
-          }
-
-          .owl-dots{
-            display:none;
-          }
-
-          .owl-nav {
-            button{
-              @include absolute(0, auto, 0, 15px);
-
-              span{
-                text-indent:-999999em;
-                overflow:hidden;
-                @include btn_img(block, 24px, 46px);
-              }
-
-              &.owl-prev{
-                span{
-                  background:url(#{$imgIcon}icon_slider_prev.png);
-                }
-              }
-              &.owl-next{
-                right:15px;
-                left:auto;
-
-                span{
-                  background:url(#{$imgIcon}icon_slider_next.png);
-                }
-              }
-
-              &:hover{
-                background:none;
-              }
-            }
-          }
-
-        }
-      }
-
-      .policy_mid{
-        padding:80px 0 150px;
-
-        @include respond-to('medium') {
-          padding:35px 0 75px;
-        }
-
-        .mid_top{
-          .vision{
-            height:379px;
-            background:url(#{$imgSub}company/company_mid_list_bg1.png) no-repeat center top;
+          .head{
+            font-size: $fontSize+2;
+            font-weight: bold;
+            color: $white;
             position: relative;
 
-            @include respond-to('medium') {
-              width: 94%;
-              margin: 0 auto;
-              zoom: .8;
+            &:after{
+              @include btn_img(block, 1px, 100%);
+              @include absolute(0, 0, 0, 0);
+              margin:auto;
+              background: $lightenGray;
+              content:"";
+              z-index:-1;
             }
-
-            span{
-              color: $white;
-              font-size:$fontSize+6;
-              @include absolute(50%, 0, auto, 0);
-              transform: translateY(-50%);
-              -webkit-transform: translateY(-50%);
-              -moz-transform: translateY(-50%);
-
-              @include respond-to('medium') {
-                font-size:$fontSize+2;
-              }
-
-              h3{
-                font-size:$fontSize+18;
-                font-weight:bold;
-                text-transform: uppercase;
-
-                @include respond-to('medium') {
-                  font-size:$fontSize+11;
-                }
   
-                &:after{
-                  width:50px;
-                  height:1px;
-                  background:$white;
-                  content:"";
-                  display:block;
-                  margin:20px auto;
-                }
-              }
+            li{
+              @include btn_img(block, 180px, 50px);
+              line-height: 50px;
+              margin:0 auto;
+              padding-bottom: 40px;
+              background: url(#{$imgSub}company/company_group_head_bg1.png) no-repeat center top;
             }
-            
           }
 
-          .vision_btm{
-            height:534px;
-            background:url(#{$imgSub}company/company_mid_list_bg2.png) no-repeat center top;
+          .tree_inner{
+            background: url(../images/sub/company/company_group_bg2.png) no-repeat center top;
+            height: 130px;
             position: relative;
-
-            @include respond-to('ssmall') {
-              zoom: .8;
-            }
 
             ul{
-              @include absolute(50%, 0, auto, 0);
-              transform: translateY(-50%);
-              -webkit-transform: translateY(-50%);
-              -moz-transform: translateY(-50%);
+              padding-top: 40px;
+              width:12%;
+              max-width:145px;
+              @include absolute(0, auto, auto, auto);
 
-              @include respond-to('medium') {
-                top:45%;
+              > li{
+                border:1px solid $gray;
+                color:$fontGray;
+                line-height: 50px;
+                min-height:50px;
+                background: $white;
+                @include boxsize;
               }
-              @include respond-to('ssmall') {
-                top:40%;
+
+              &.tree0{
+                left: 16%;
               }
-              
-              li{
-                font-size:$fontSize+14;
-                font-weight:bold;
-                color:#db492c;
-                margin-bottom:100px;
-                line-height: 1;
-
-                @include respond-to('medium') {
-                  font-size:$fontSize+5;
-                  margin-bottom:75px;
-                }
-
-                &:first-child{
-                  color:$red;
-                }
-
-                p{
-                  font-size:$fontSize+6;
-                  font-weight:normal;
-                  color:$darkGray;
-                  margin-top:30px;
-
-                  @include respond-to('medium') {
-                    font-size:$fontSize+2;
-                    margin-top:20px;
-                  }
-                  
-                }
+              &.tree1{
+                left: 34.5%;
+              }
+              &.tree2{
+                right: 34.5%;
+              }
+              &.tree3{
+                right: 16%;
               }
             }
           }
         }
-
-        .mid_bottom{
-          width:94%;
-          max-width:1200px;
-          margin: -160px auto 0;
-
-          @include respond-to('medium') {
-            margin: -220px auto 0;
-          }
-
-          ul{
-            @include after;
-
-            @include respond-to('big-half') {
-              background:url(#{$imgSub}company/company_mid_list_plus.png) no-repeat center;
-            }
-
-            li{
-              float:left;
-              width:$grid4;
-              position: relative;
-              padding:0 10px;
-              @include boxsize;
-
-              &:after{
-                content:"";
-                @include btn_img(block, 32px, 32px);
-                background:url(#{$imgSub}company/company_mid_list_plus.png) no-repeat center;
-                @include absolute(0, auto, 0, -16px);
-                margin:auto;
-              }
-
-              &:first-child{
-                &:after{
-                  background:none;
-                }
-              }
-
-              @include respond-to('big-half') {
-                width:$grid2;
-                margin:20px 0;
-
-                &:after{
-                  background:none;
-                }
-              }
-
-              &.mid_bottom1{
-                p{
-                  color:#e6743b;
-                }
-              }
-              &.mid_bottom2{
-                p{
-                  color:#ff9292;
-                }
-              }
-              &.mid_bottom3{
-                p{
-                  color:#ccc;
-                }
-              }
-              &.mid_bottom4{
-                p{
-                  color:#0a2550;
-                }
-              }
-
-              img{
-                display:block;
-                width:100%;
-                max-width:220px;
-                margin:0 auto;
-              }
-
-              p{
-                @include absolute(50%, 0, auto, 0);
-                transform: translateY(-50%);
-                -webkit-transform: translateY(-50%);
-                -moz-transform: translateY(-50%);
-                font-size:$fontSize+6;
-                color:#db492c;
-                line-height:1.2;
-
-                @include respond-to('medium') {
-                  font-size:$fontSize+2;
-                }
-              }
-
-            }
-          }  
-          
-          >div{
-            display:block;
-            margin-top:60px;
-            border-radius: 50px;
-            color:$white;
-            min-height:100px;
-            background:url(#{$imgSub}company/company_mid_btn_bg.png) no-repeat center;
-
-            @include respond-to('medium') {
-              background-size: cover;
-              border-radius: 30px;
-              margin-top:20px;
-            }
-
-            span{
-              padding-top:40px;
-              display: inline-block;
-              text-align: left;
-
-              @include respond-to('medium') {
-                text-align: center;
-                padding:25px 0;
-              }
-
-              h4{
-                font-size:$fontSize+14;
-                font-weight: bold;
-                float: left;
-                line-height: 30px;
-                display: inline-block;
-                width:155px;
-
-                @include respond-to('medium') {
-                  font-size:$fontSize+5;
-                  float:none;
-                  margin-bottom:10px;
-                }
-              }
-
-              p{
-                display: block;
-                overflow: hidden;
-                text-align: left;
-                line-height: 30px;
-                font-size:$fontSize+6;
-                float: left;
-
-                @include respond-to('medium') {
-                  font-size:$fontSize+2;
-                  float:none;
-                }
-                @include respond-to('ssmall') {
-                  font-size:$fontSizeM;
-                }
-              }
-            }
-            
-          }
-        }
-      } 
-    }
-
-    .motto{
-      padding:100px 0;
-
-      &.fixed_bg{
-        background-image:url(#{$imgSub}company/company_btm01.jpg);
       }
-
-      ul{
-        width:100%;
-        max-width:1200px;
-        margin:40px auto 0;
-        @include after;
-
+    
+    }
+    .guide{margin-bottom:95px;}
+    .gray_box{
+      box-sizing: border-box;
+      padding:60px;
+      text-align: center;
+      background-color: $darkWhite;
+      .point{
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom:55px;
+        display: block;
+      }
+      .clear{
         li{
-          float:left;
-          width:$grid3;
-          color:$white;
-          font-size:$fontSize+2;
-          position: relative;
-
-          @include respond-to('large') {
-            width:$grid1;
-            margin-top:20px;
-
-            &:first-child{
-              margin-top:0;
-
+          width:20%;
+          height:150px;
+          background-image: url(#{$imgSub}lab/rnd_icon_line.png);
+          background-size: auto;
+          background-repeat: no-repeat;
+          background-position: right center;
+          padding-top:15px;
+          box-sizing: border-box;
+          @for $i from 1 through 5 {
+            &:nth-child(#{$i}){
+              i{
+                background-image: url(#{$imgSub}lab/rnd_icon0#{$i}.png);
+                background-repeat: no-repeat;
+                background-position: top center;
+                display: block;
+                height:70px;
+                width:100%;
+                margin-bottom:15px;
+              }
             }
-          }
-
-          img{
-            @include btn_img(block, 100%, auto);
-            max-width: 300px;
-            margin: auto;
-          }
-
-          span{
-            @include absolute(50%, 0, auto, 0);
-            margin: auto;
-            transform: translateY(-50%);
-            -webkit-transform: translateY(-50%);
-            -moz-transform: translateY(-50%);
-            cursor: default;
-
-            h3{
-              text-transform: capitalize;
-              font-size:$fontSize+22;
-              margin-bottom:20px;
-              line-height:1;
-              cursor: default;
-            }
-
-            &:before{
-              display:block;
-
-            }
-          }
-
-          &:hover{
-            background:url(#{$imgSub}company/company_motto_bg_hover.png) no-repeat center;
-
-            img{
-              opacity:0;
-            }
-          }
-          
+        }
+          p{color:$darkGray;
+          font-size:18px;
+          letter-spacing: -0.056em;
+          line-height: 1.22;
+        }
         }
       }
     }
-
+    .tit{margin-bottom:35px;}
+    .equip{
+      li{
+        width:25%;
+        text-align:center;
+        height:250px;
+        display: table;
+        @for $i from 1 through 5 {
+          &:nth-child(#{$i}){
+            background-image: url(#{$imgSub}lab/rnd_equip_0#{$i}.png);
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+        }
+        span{
+          display: table-cell;
+          width: 100%;
+          vertical-align: middle;
+          color:#fff;
+          font-size: 22px;
+          line-height: 1.18;
+        }
+      }
+    }
   }
+  .fixed_bg{
+    background-image:url(#{$imgSub}lab/rnd_bg02.png);
+    background-size: contain !important;
+    height:600px;
+    box-sizing: border-box;
+  }
+  .title_box{text-align: center;}
+  .state.cont{
+    max-width:100% !important;
+    padding-top:0;
+    
+    .section{
+      max-width: 1200px;
+      margin:0 auto;
+      margin-top:-300px;
+      background-color:#fff;
+      padding:60px 100px 120px;
+      box-sizing: border-box;
+    }
+  }
+
 }
 
 
@@ -734,87 +480,7 @@
 
 
 //ir정보
-#container.ir_info{
-  .cont_section{
-    margin-top:120px;
-    width:94%;
-    margin:0 auto;
-    max-width:1200px;
-
-    .ir_graph{
-      > img{
-        @include btn_img(block, 100%, auto);
-        max-width:1200px;
-      }
-    }
-
-    .ir_table{
-      width:100%;
-      padding:100px 0 30px;
-
-      >p{
-        float: right;
-        font-size:$fontSizeM;
-        color:$fontGray;
-      }
-
-      table{
-        width:100%;
-        text-align:center;
-        border-top:1px solid $darkGray;
-        border-bottom:1px solid $darkGray;
-        color:$fontGray;
-
-        tr{
-          border-bottom:1px solid $lightenGray;
-
-          &.foot{
-            background:$bgGray;
-
-            &.last_foot{
-              border-bottom:none;
-            }
-
-            td{
-              font-weight: bold;
-            }
-          }
-
-          td{
-            padding:20px 0;
-            vertical-align: middle;
-
-            &.td_title{
-              color:$black;
-            }
-          }
-        }
-
-        thead{
-          td{
-            color:$black;
-          } 
-        }
-
-        tfoot{
-          tr{
-            border-top:1px solid $darkGray;
-            border-bottom:1px solid $darkGray;
-
-            td{
-              font-weight: bold;
-
-              &.td_title{
-                color:$darkGray;
-              } 
-            }
-          }
-        }
-
-      }
-    }
-  }
-}
+#container.ir_info{}
 
 
 

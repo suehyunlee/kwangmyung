@@ -1,0 +1,249 @@
+//채용안내
+#container.recruit{
+  .cont{
+    padding:100px 0 0;
+    position: relative;
+    z-index: 9;
+    max-width:1200px;
+    margin:0 auto;
+    
+    .cont_section{
+      .section_box{
+        width:100%;
+
+        > ul{
+          @include after;
+
+          > li{
+            width:31.83%;
+            margin-left:2%;
+            float:left;
+            border:1px solid $lightenGray;
+            text-align:center;
+            padding:80px 20px;
+            @include boxsize;
+
+            &:first-child{
+              margin-left:0;
+            }
+
+            .txt{
+              margin-top:50px;
+
+              h3{
+                font-size:$fontSize+6;
+                color:$darkGray;
+                margin-bottom:20px;
+
+                >span{
+                  color:$red;
+                }
+              }
+            }
+          }
+        }
+      }      
+    }
+  }
+
+  .institution{
+    margin:150px auto 0;
+    background:url(#{$imgSub}recruit/recruit_bg.jpg) no-repeat center top;
+
+    .cont{
+      @include after;
+
+      .tit{
+          background: url(../images/icon/icon_sub_title.png) no-repeat right top;
+      }    
+
+      .txt{
+        background:url(#{$imgSub}recruit/recruit_txt_bg.png);
+        color:$white;
+        width:50%;
+        max-width:455px;
+        padding:60px;
+        @include boxsize;
+        float: right;
+
+        > dl{
+          margin-top:60px;
+
+          &:first-child{
+            margin-top:0;
+          }
+
+          dt{
+            font-size:$fontSize+6;
+            margin-bottom:20px;
+          }
+
+          dd{
+            padding-left:15px;
+            position:relative;
+            line-height:1.6;
+
+            > span{
+              @include absolute(0, auto, 0, 0);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @mixin icon_welfare($index) {
+    #welfare#{$index}{
+      span.img{
+        @include btn_img(block, 68px, 52px);
+        background:url(#{$imgSub}recruit/welfare#{$index}.png) no-repeat left top;
+      }
+
+      &:hover{
+        span.img{
+          background:url(#{$imgSub}recruit/welfare#{$index}_on.png) no-repeat left top;
+        }
+      }
+    }
+  }
+  
+  @each $index in 1, 2, 3, 4, 5, 6, 7 {
+    @include icon_welfare($index);
+  }
+
+  .welfare{
+    padding:60px 0 100px;
+
+    > div{
+      margin-top:10px;
+
+      > ul{
+        width:102%;
+        margin-left:-2%;
+        @include after;
+
+        li{
+          background:$darkWhite;
+          padding:35px;
+          float:left; 
+          width:23%;
+          margin-left:2%;
+          margin-top:30px;
+          @include boxsize;
+
+          h3{
+            margin:45px 0 25px;
+            font-size:$fontSize+6;
+          }
+
+          p{
+            color:$fontGray;
+            height:50px;
+          }
+
+          &:hover{
+            box-shadow: 0px 0px 15px 6px #e2e2e2;
+            -webkit-box-shadow: 0px 0px 15px 6px #e2e2e2;
+            -moz-box-shadow: 0px 0px 15px 6px #e2e2e2;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// 채용공고
+#container.recruit_notice{
+  .cont{
+    .cont_section{
+      .section_box{
+        ul{
+          li{
+            width:18%;
+            border:none; 
+            background:$darkWhite;
+            padding:60px 0;
+
+            .txt{
+              margin-top:25px;
+              font-size:$fontSize+2;
+
+              h3{
+                font-weight: bold;
+                color:$black;
+                margin-bottom:5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .list{
+    .list_style{
+      margin-top:40px;
+
+      li{
+        &:hover{
+          background:#f6f6f6;
+
+          p{
+            color:$red;
+          }
+
+          &.top{
+            background:#fff;
+          }
+        }
+
+        .state{
+          span{
+            color: $white;
+            background-color: $lightGray;
+            padding: 0 10px;
+            line-height: 30px;
+            width:60px;
+            display:block;
+            margin:0 auto;
+            @include boxsize;
+
+            &.ing{
+              background-color: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .recruit_faq{
+    padding-bottom:150px;
+
+    .list_style{
+      margin-top:40px;
+
+      li{
+        padding:40px;
+        padding-left:115px;
+        color:$fontGray;
+        position: relative;
+        
+        .num{
+          color:$gray;
+          font-size:$fontSize+24;
+          @include absolute(40px, auto, auto, 30px);
+          line-height:1;
+        }
+
+        h3{
+          color:$red;
+          font-size:$fontSize+2;
+          font-weight:600;
+          margin-bottom:15px;
+        }
+      }
+    }
+  }
+}

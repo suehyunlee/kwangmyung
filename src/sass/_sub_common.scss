@@ -191,9 +191,18 @@
         vertical-align: middle;
         text-align:center;
         width:8%;
-        &.date{width:12%}
+        &.date{
+          width:12%
+        }
+        &.date_big{
+          width:20%
+        }
         &.li_tit{
-          width:72%;}
+          width:72%;
+        }
+        &.li_tit_sm{
+          width:64%;
+        }
       }
     }
     &.notice{
@@ -204,7 +213,7 @@
         line-height:30px;
       }
     }
-    a{
+    .list_box{
       height:100%;
       width:100%;
       display: table;
@@ -216,6 +225,9 @@
         width:8%;
         box-sizing: border-box;
         &.date{width:12%}
+        &.date_big{
+          width:25%
+        }
         &.li_tit{
           width:72%;
           padding-left:15px;
@@ -229,6 +241,9 @@
             text-overflow: ellipsis;
             -webkit-line-clamp:1;
           }
+        }
+        &.li_tit_sm{
+          width:59%;
         }
       }
     }
