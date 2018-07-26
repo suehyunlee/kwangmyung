@@ -17,6 +17,7 @@
   <!-- js -->
   <script type="text/javascript" src="src/js/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="src/js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="src/js/jquery.bpopup.min.js"></script>
   <script type="text/javascript" src="src/js/common.js"></script>
 
  </head>
@@ -260,12 +261,12 @@
 				</div>
 				
 				<ul class="tab_box">
-					<li><a href="#" class="on">인증 현황</a></li>
-					<li><a href="#">특허 현황</a></li>
-					<li><a href="#">포상 및 훈포상 현황</a></li>
+					<li><a href="#certify" class="on">인증 현황</a></li>
+					<li><a href="#patent">특허 현황</a></li>
+					<li><a href="#award">포상 및 훈포상 현황</a></li>
 				</ul>
 
-				<ul class="list_style">
+				<ul class="list_style" id="certify">
 					<li class="top">
 						<div>
 							번호
@@ -283,7 +284,7 @@
 							<div class="li_tit"><p>기업 부설연구소 인정</p></div>
 							<div class="confirm">한국 산업기술 진흥 협회</div>
 							<div class="date">2002-09-18</div>
-							<div class="img_btn"><a href="#">보기</a></div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
 						</div>
 					</li>
 					<li>
@@ -294,7 +295,7 @@
 							<div class="li_tit"><p>유망 중소기업 인증</p></div>
 							<div class="confirm">한국 산업 은행</div>
 							<div class="date">2005-04-06</div>
-							<div class="img_btn"><a href="#">보기</a></div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
 						</div>
 					</li>
 					<li>
@@ -305,14 +306,296 @@
 							<div class="li_tit"><p>소재 전문기업 확인</p></div>
 							<div class="confirm">산업 자원부</div>
 							<div class="date">2005-04-20</div>
-							<div class="img_btn"><a href="#">보기</a></div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>4</span>
+							</div>
+							<div class="li_tit"><p>SQ 인증(PRESS, 용접, 금형)</p></div>
+							<div class="confirm">CRE BIZ</div>
+							<div class="date">2005-11-30</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>5</span>
+							</div>
+							<div class="li_tit"><p>우량 중소기업 선정</p></div>
+							<div class="confirm">기술 신용보증 기금</div>
+							<div class="date">2005-12-28</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>6</span>
+							</div>
+							<div class="li_tit"><p>소재 전문기업 확인</p></div>
+							<div class="confirm">한일이화/대유/JCAK</div>
+							<div class="date">2006-04-26</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>7</span>
+							</div>
+							<div class="li_tit"><p>기술 혁신형 중소기업 확인</p></div>
+							<div class="confirm">경기 지방 중소기업청</div>
+							<div class="date">2008-11-18</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>8</span>
+							</div>
+							<div class="li_tit"><p>벤처기업 확인</p></div>
+							<div class="confirm">기술 보증기금 협회</div>
+							<div class="date">2009-11-18</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+				</ul>
+
+				<ul class="list_style" id="patent" style="display:none;">
+					<li class="top">
+						<div>
+							번호
+						</div>
+						<div class="li_tit">명칭</div>
+						<div class="confirm">인증처</div>
+						<div class="date">등록일</div>
+						<div>이미지보기</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>1</span>
+							</div>
+							<div class="li_tit"><p>자동차 시트의 터닝 장치</p></div>
+							<div class="confirm">한국 산업기술 진흥 협회</div>
+							<div class="date">2002-11-18</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>2</span>
+							</div>
+							<div class="li_tit"><p>자동차 헤드레스트의 완충장치</p></div>
+							<div class="confirm">한국 산업 은행</div>
+							<div class="date">2005-04-06</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>3</span>
+							</div>
+							<div class="li_tit"><p>자동차용 시트의 슬라이드 트랙</p></div>
+							<div class="confirm">산업 자원부</div>
+							<div class="date">2005-04-20</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>4</span>
+							</div>
+							<div class="li_tit"><p>연속 발포라인의 금형 개폐 시스템_1</p></div>
+							<div class="confirm">CRE BIZ</div>
+							<div class="date">2005-11-30</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>5</span>
+							</div>
+							<div class="li_tit"><p>우량 중소기업 선정</p></div>
+							<div class="confirm">기술 신용보증 기금</div>
+							<div class="date">2005-12-28</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>6</span>
+							</div>
+							<div class="li_tit"><p>소재 전문기업 확인</p></div>
+							<div class="confirm">한일이화/대유/JCAK</div>
+							<div class="date">2006-04-26</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>7</span>
+							</div>
+							<div class="li_tit"><p>기술 혁신형 중소기업 확인</p></div>
+							<div class="confirm">경기 지방 중소기업청</div>
+							<div class="date">2008-11-18</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>8</span>
+							</div>
+							<div class="li_tit"><p>벤처기업 확인</p></div>
+							<div class="confirm">기술 보증기금 협회</div>
+							<div class="date">2009-11-18</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+				</ul>
+
+				<ul class="list_style" id="award" style="display:none;">
+					<li class="top">
+						<div>
+							번호
+						</div>
+						<div class="li_tit">명칭</div>
+						<div class="confirm">인증처</div>
+						<div class="date">등록일</div>
+						<div>이미지보기</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>1</span>
+							</div>
+							<div class="li_tit"><p>기업 부설연구소 인정</p></div>
+							<div class="confirm">한국 산업기술 진흥 협회</div>
+							<div class="date">2002-09-18</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>2</span>
+							</div>
+							<div class="li_tit"><p>유망 중소기업 인증</p></div>
+							<div class="confirm">한국 산업 은행</div>
+							<div class="date">2005-04-06</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>3</span>
+							</div>
+							<div class="li_tit"><p>소재 전문기업 확인</p></div>
+							<div class="confirm">산업 자원부</div>
+							<div class="date">2005-04-20</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>4</span>
+							</div>
+							<div class="li_tit"><p>SQ 인증(PRESS, 용접, 금형)</p></div>
+							<div class="confirm">CRE BIZ</div>
+							<div class="date">2005-11-30</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>5</span>
+							</div>
+							<div class="li_tit"><p>우량 중소기업 선정</p></div>
+							<div class="confirm">기술 신용보증 기금</div>
+							<div class="date">2005-12-28</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>6</span>
+							</div>
+							<div class="li_tit"><p>소재 전문기업 확인</p></div>
+							<div class="confirm">한일이화/대유/JCAK</div>
+							<div class="date">2006-04-26</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>7</span>
+							</div>
+							<div class="li_tit"><p>기술 혁신형 중소기업 확인</p></div>
+							<div class="confirm">경기 지방 중소기업청</div>
+							<div class="date">2008-11-18</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
+						</div>
+					</li>
+					<li>
+						<div class="list_box">
+							<div>
+								<span>8</span>
+							</div>
+							<div class="li_tit"><p>벤처기업 확인</p></div>
+							<div class="confirm">기술 보증기금 협회</div>
+							<div class="date">2009-11-18</div>
+							<div class="img_btn"><a href="javascript:showPolicy();">보기</a></div>
 						</div>
 					</li>
 				</ul>
 				
-				
+				<script>
+				$(document).ready(function(){
+					$('.tab_box a').click(function(){
+						$(this).addClass('on');
+						$('.tab_box a').not(this).removeClass('on');
+
+						var box_name = $(this).attr('href');
+						$('.list_style'+box_name).show();
+						$('.list_style').not('.list_style'+box_name).hide();
+					});
+				});
+
+				function showPolicy(mode){
+					$('.popup').bPopup({
+						speed: 450,
+						positionStyle: 'fixed', //'fixed' or 'absolute'
+						transition: 'fadeIn'
+					});
+				}
+				</script>
 			</div>
-            <!-- cont -->
+			<!-- cont -->
+			
+			<div class="popup" id="policy">
+				<a href="#" class="b-close">close</a>
+
+				<div id="quality_policy_pop">
+					<img src="dist/images/sub/lab/sample/1_기업부설연구소_인정서.JPG" alt="">
+				</div>
+			</div>
         </div>
         <!-- container -->
         

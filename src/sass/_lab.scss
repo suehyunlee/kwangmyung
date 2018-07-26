@@ -367,4 +367,33 @@
       }
     }
   }
+
+  
+}
+.popup#policy{
+  @include btn_img(none, 94%, auto);
+  @include boxsize;
+  max-width:580px;
+  z-index: 99999999 !important;
+  background: #fff;
+  margin: 0 auto;
+
+  .b-close{
+    @include absolute(-30px, 0, auto, auto);
+    @include btn_img(block, 17px, 18px);
+    background:url(#{$imgSub}community/video_close_btn.png) no-repeat center;
+    overflow:hidden;
+    text-indent:-999999em;
+  }
+
+  #quality_policy_pop{
+    width:100%;
+    max-width: 580px;
+    position:relative;
+
+    > img{
+      @include btn_img(block, 100%, auto);
+    }
+
+  }
 }
