@@ -1,23 +1,18 @@
 //
 #container.lab{
   .sub_visual{
-    background-image:url(#{$imgSub}lab/rnd_bg01.png);
+    background-image:url(#{$imgSub}company/company_top.jpg);
     width:100%;
     height:345px;
     text-align:center;
     position: relative;
     background-position-y: 90px;
-    display: table;
+
     @include respond-to('medium') {
       margin-top:61px;
       background-image:url(#{$imgSub}company/company_top.jpg);
       min-width: 0;
       background-position-y: 61px;
-    }
-    .txt{
-      position: static;
-      display: table-cell;
-      vertical-align: middle;
     }
   }
   .point{color:$red !important}
@@ -199,4 +194,177 @@
 
 
 
+//품질환경방침
+#container.quality{
+  .cont{
+    padding:100px 0 0;
+    position: relative;
+    z-index: 9;
+    max-width:1200px;
+    margin:0 auto;
 
+    .cont_section{
+      margin-bottom:100px;
+      @include after;
+
+      > div{
+        float:left;
+        width:50%;
+        padding-right:2.5%;
+        @include boxsize;
+        
+        >img{
+          @include btn_img(block, 100%, auto);
+          max-width:570px;
+        }
+
+        &.txt_box{
+          padding-left:2.5%;
+
+          .tit{
+            margin-bottom:30px;
+          }
+
+          ul{
+            margin-top:40px;
+
+            li{
+              background:$darkWhite;
+              margin-top:10px;
+              padding:25px 30px 25px 90px;
+              position: relative;
+              @include boxsize;
+
+              &:first-child{
+                margin-top:0;
+              }
+
+              &:nth-child(even){
+                background:#eee;
+              }
+
+              > span{
+                @include absolute(0, auto, 0, 30px);
+                color:$gray;
+                font-size:$fontSize+24;
+                height:40px;
+                margin:auto;
+                line-height:1;
+              }
+            }
+          }
+        }
+      }
+
+      &.section_right{
+        > div{
+          float:right;
+          padding-left:2.5%;
+
+          &.txt_box{
+            padding-right:2.5%;
+          }
+        }
+      }
+    }
+
+    .tab_box{
+      width:70%;
+      max-width:480px;
+      margin:0 auto;
+      text-align:center;
+      border:1px solid $darkGray;
+      @include after;
+  
+      @include respond-to('small') {
+        position: relative;
+        width:90%;
+        max-width:300px;
+  
+        &:before{
+          @include btn_img(block, 100%, 1px);
+          content:"";
+          @include absolute(0, 0, 0, 0);
+          margin: auto;
+          background:$darkGray;
+        }
+      }
+  
+      li{
+        float:left;
+        width:33.33%;
+        border-left:1px solid $darkGray;
+        @include boxsize;
+  
+        @include respond-to('small') {
+          width:50%;
+  
+          &:nth-child(odd){
+            border:none;
+          }
+        }
+  
+        &:first-child{
+          border:none;
+        }
+  
+        a{
+          display:block;
+          color:$darkGray;
+          padding:8px 0;
+  
+          &.on{
+            color:$white;
+            background:$darkGray;
+          }
+        }
+      }
+    }
+
+    .list_style{
+      margin-top:40px;
+      padding-bottom:120px;
+
+      li{
+        &.top{
+          > .li_tit{
+            width: 30%;
+          }
+
+          > .confirm{
+            width: 15%;
+          }
+        }
+
+        .list_box{
+          > .li_tit{
+            width: 30%;
+          }
+
+          > .confirm{
+            width: 15%;
+          }
+
+          > .img_btn{
+            a{
+              @include btn_img(block, 60px, 30px);
+              line-height:30px;
+              border:1px solid $lightGray;
+              @include boxsize;
+              color:$lightGray;
+              margin:0 auto;
+              font-size:$fontSizeM;
+            }
+          }
+
+          &:hover{
+            background-color:$bgGray;
+            > div{
+              color:$red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

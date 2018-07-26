@@ -1472,3 +1472,182 @@
     }
   }
 }
+
+
+//ci소개
+#container.ci{
+  .cont{
+    width:94%;
+    max-width:1200px;
+    margin:0 auto;
+    @include after;
+
+    .cont_section{
+      padding-bottom:100px;
+
+      .tit{
+        margin-bottom:0px;
+        padding-bottom:30px;
+      }
+
+      > p{
+        padding-bottom:10px;
+      }
+
+      .ci_box{
+        margin-top:10px;
+        border:1px solid $gray;
+        padding:120px 5%;
+        background:url(#{$imgSub}company/ci_bg.png) repeat;
+        width:100%;
+        @include boxsize;
+        @include after;
+
+        > div{
+          width:50%;
+          float:left;
+          text-align:center;
+        }
+
+        &.signature{
+          display:table;
+          padding:100px 5%;
+
+          div{
+            float: none;
+            display: table-cell;
+            vertical-align: middle;
+
+            > img{
+              vertical-align: top;
+
+              &:first-child{
+                margin-right:15%;
+              }
+            }
+
+            &:last-child{
+              text-align:left;
+              padding-left:5%;
+              @include boxsize;
+
+              > img{
+                margin-top:60px;
+
+                &:first-child{
+                  margin-top:0;
+                }
+              }
+            }
+          }
+        }
+
+        &.rule{
+          display:table;
+          padding:70px 5%;
+
+          div{
+            float: none;
+            display: table-cell;
+            vertical-align: middle;
+          }
+        }
+      }
+
+      .ci_info{
+        margin-top:30px;
+        @include after;
+
+        > ul{
+          width:50%;
+          float:left;
+
+          li{
+            padding-left:15px;
+            position:relative;
+            color:$fontGray;
+            line-height:1.6;
+
+            > .dot{
+              @include absolute(0, auto, 0, 0);
+            }
+
+            em{
+              color:$red;
+            }
+          }
+        }
+
+        .btn_box{
+          float:right;
+          text-align:right;
+
+          > a{
+            text-align:center;
+            @include btn_img(inline-block, 150px, 45px);
+            line-height:45px;
+            margin-left:15px;
+
+            span{
+              padding-left: 25px;
+            }
+
+            &.btn_whtie{
+              background:$white;
+              border:1px solid $lightenGray;
+              color:$fontGray;
+
+              span{
+                background: url(../images/icon/icon_down.png) no-repeat left center;
+              }
+            }
+            &.btn_red{
+              background:$red;
+              border:1px solid $red;
+              color:$white;
+
+              span{
+                background: url(../images/icon/icon_down_hover.png) no-repeat left center;
+              }
+            }
+          }
+        }
+      }
+
+      .color_box{
+        @include after;
+        margin-top:20px;
+        
+        > div{
+          width:49%;
+          margin-left:2%;
+          float:left;
+          color:$white;
+          padding:40px 40px 70px;
+          @include boxsize;
+
+          &:first-child{
+            margin-left:0;
+          }
+
+          &.red{
+            background:#e60012;
+          }
+
+          &.blue{
+            background:#003969;
+          }
+
+          h4{
+            font-size:$fontSize+6;
+          }
+
+          ul{
+            margin-top:20px;
+            line-height:1.6;
+          }
+        }
+      }
+    }
+  }
+}
