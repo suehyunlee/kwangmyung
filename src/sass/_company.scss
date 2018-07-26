@@ -490,7 +490,7 @@
       h4{
         color:$red;
         font-size:$fontSize+12;
-        margin-bottom:50px;
+        margin-bottom:30px;
 
         @include respond-to('huge') {
           br{
@@ -498,7 +498,7 @@
           }
         }
         @include respond-to('large') {
-          margin-bottom:30px;
+          margin-bottom:20px;
           font-size:$fontSize+10;
         }
         @include respond-to('medium') {
@@ -582,7 +582,7 @@
           float:left;
           width:40%;
           text-align:right;
-          font-size:$fontSize+24;
+          font-size:$fontSize+14;
           margin-top: -30px;
           margin-right:10%;
           @include transition;

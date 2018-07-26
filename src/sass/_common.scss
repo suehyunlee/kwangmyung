@@ -137,6 +137,31 @@
               }
             }
 
+            &.menu-title{
+              // float: left;
+              // display:inline-block;
+
+              > a{
+                line-height:$fontSize+8;
+                font-size:$fontSize+8;
+                color:$darkGray;
+                font-weight:bold;
+                width: 135px;
+                float: left;
+                display:inline-block;
+
+                @include respond-to('medium-half') {
+                  width: 120px;
+                }
+
+                @include respond-to('medium-half') {
+                  font-size:$fontSize+5;
+                  line-height:$fontSize+5;
+                }
+              }
+              
+            }
+
             > ul{
               display:block;
               overflow: hidden;

@@ -183,6 +183,15 @@
       background-color:#fff;
       padding:60px 100px 120px;
       box-sizing: border-box;
+
+      .list_box{
+        .li_tit{
+          width: 65%;
+        }
+        .num, .date{
+          width: 12%;
+        }
+      }
     }
   }
 
