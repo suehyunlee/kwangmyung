@@ -203,11 +203,12 @@
             color: $white;
             background-color: $lightGray;
             padding: 0 10px;
-            line-height: 30px;
+            line-height: 29px;
             width:60px;
             display:block;
             margin:0 auto;
             @include boxsize;
+            font-size:$fontSizeM;
 
             &.ing{
               background-color: $red;
